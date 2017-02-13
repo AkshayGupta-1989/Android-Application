@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CongressApplication</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_legislature">Legislators</string>
+    <string name="nav_bills">Bills</string>
+    <string name="nav_committee">Committees</string>
+    <string name="nav_favorites">Favorites</string>
+
+    <string name="nav_about_us">About Me</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Legislature</item>
+        <item>Bills</item>
+        <item>Committee</item>
+        <item>Favorites</item>
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_web_wiew">WebWiewActivity</string>
+</resources>

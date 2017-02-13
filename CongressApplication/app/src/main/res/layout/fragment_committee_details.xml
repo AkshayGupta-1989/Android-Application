@@ -1,0 +1,229 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             tools:context="com.example.arpit.congressapplication.fragment.CommitteeDetails"
+    >
+<LinearLayout android:id="@+id/main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_alignParentLeft="true"
+              android:orientation="vertical">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout android:id="@+id/thumbnail"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_alignParentLeft="true"
+                      android:orientation="vertical">
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_gravity="right"
+                >
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:paddingRight="10dp"
+                    />
+
+            </RelativeLayout>
+
+            <!-- TODO: Update blank fragment layout -->
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                         android:id="@+id/tableLayout1"
+                         android:layout_width="fill_parent"
+                         android:layout_height="fill_parent">
+
+                <!-- edittext span 2 column -->
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Committee ID:"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat"/>
+                    <TextView
+                        android:id="@+id/committeeId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_weight="1"/>
+                </TableRow>
+
+                <!-- 3 columns -->
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat"/>
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"/>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:weightSum="6"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Chamber:"
+                        android:gravity="left"
+                        android:layout_weight="5"
+                        android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+                  <!--  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:orientation="horizontal"
+                                  android:weightSum="2">
+
+                        <ImageView
+                            android:layout_weight="0.5"
+                            android:id="@+id/chamberPic"
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                           />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.75"
+                            android:id="@+id/chamber"
+                            android:gravity="right"/>
+
+                    </LinearLayout>-->
+                        <ImageView
+                            android:id="@+id/chamberPic"
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                            android:layout_weight=".15"
+                            android:foregroundGravity="center"
+                            />
+
+                    <TextView
+                        android:id="@+id/chamber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".85"
+                        android:gravity="right"/>
+                </TableRow>
+                <!-- display this button in 3rd column via layout_column(zero based) -->
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Parent Committee:"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat"/>
+                    <TextView
+                        android:id="@+id/parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"/>
+                </TableRow>
+
+                <!-- display this button in 2nd column via layout_column(zero based) -->
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:weightSum="2"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Contact:"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat"/>
+                    <TextView
+                        android:id="@+id/contact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"/>
+                </TableRow>
+
+                <!-- display this button in 2nd column via layout_column(zero based) -->
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:weightSum="2"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Office:"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat"/>
+                    <TextView
+                        android:id="@+id/office"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</FrameLayout>
+

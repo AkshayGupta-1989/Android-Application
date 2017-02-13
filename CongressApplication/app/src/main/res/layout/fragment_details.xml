@@ -1,0 +1,409 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                tools:context="com.example.arpit.congressapplication.fragment.Details"
+            >
+    <LinearLayout android:id="@+id/main"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentLeft="true"
+                  android:orientation="vertical">
+      <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout android:id="@+id/thumbnail"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentLeft="true"
+                  android:orientation="vertical">
+
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="right"
+            >
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:paddingRight="10dp"
+                />
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_toRightOf="@id/star"
+                android:paddingRight="10dp"
+                />
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_toRightOf="@id/facebook"
+                android:paddingRight="10dp"
+                />
+            <ImageView
+                android:id="@+id/website"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_toRightOf="@id/twitter"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/LinearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imagelegis"
+                android:layout_width="150dip"
+                android:layout_height="150dip"
+                />
+   </LinearLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imageparty"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+
+                />
+            <TextView
+                android:id="@+id/party"
+                android:text="Column 1"
+                android:textSize="20dp"
+                android:layout_toRightOf="@id/imageparty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    <!-- TODO: Update blank fragment layout -->
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                     android:id="@+id/tableLayout1"
+                     android:layout_width="fill_parent"
+                     android:layout_height="fill_parent"
+
+            >
+
+            <!-- edittext span 2 column -->
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Name:"
+                    android:gravity="right"/>
+            </TableRow>
+
+            <!-- 3 columns -->
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"/>
+            </TableRow>
+
+            <!-- display this button in 3rd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Chamber:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/chamber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start Term:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/start"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="End Term:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/end"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="4"
+                >
+
+                <TextView
+                    android:id="@+id/term"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Term:"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right"
+                    android:layout_weight="2">
+                    <ProgressBar
+                        android:id="@+id/pb_horizontal"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:max="100"
+                       />
+
+                    <TextView
+                        android:id="@+id/tv_progress_horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/pb_horizontal"
+                        android:background="@android:color/transparent"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </TableRow>
+
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Office:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/office"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="State:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Fax:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/fax"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <!-- display this button in 2nd column via layout_column(zero based) -->
+            <TableRow
+                android:id="@+id/tableRow12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Birthday:"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    />
+                <TextView
+                    android:id="@+id/birthday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+            </TableRow>
+        </TableLayout>
+
+
+
+
+
+            <!--<WebView
+            android:id="@+id/webView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp"
+            android:scrollbars="none" />-->
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>
+</FrameLayout>
+
